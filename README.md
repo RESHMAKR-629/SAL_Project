@@ -10,7 +10,7 @@ This project explores using unsupervised rhythm and voice conversion to transfor
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 1. [Installation & Setup](#1-installation--setup)
 2. [Data Preparation](#2-data-preparation)
 3. [Speech Conversion Pipeline](#3-speech-conversion-pipeline)
