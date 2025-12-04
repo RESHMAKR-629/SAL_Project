@@ -43,7 +43,7 @@ pip install transformers datasets torch librosa soundfile jiwer pandas matplotli
 ### **3. Data Preparation**
 
 ```markdown
-## 📂 Data Preparation
+## Data Preparation
 
 1.  **Download Data:** Obtain the [TORGO database](http://www.cs.toronto.edu/~torgo/). [cite: 11, 101]
 2.  **Organize Files:** Structure your audio files to separate Dysarthric and Control speakers.
@@ -65,9 +65,10 @@ data/
 ### **4. Speech Conversion**
 
 ```markdown
-## 🔄 Speech Conversion Pipeline
+## Speech Conversion Pipeline
 
-We provide scripts to convert dysarthric speech into "healthy" speech using various configurations (Rhythm conversion, Voice conversion, or both). [cite: 42, 43, 53]
+We provide scripts to convert dysarthric speech into "healthy" speech using various configurations
+(Rhythm conversion, Voice conversion, or both)
 
 ### Single File Conversion (`conversion.py`)
 To test the conversion on a single audio file:
@@ -105,7 +106,7 @@ This project explores using unsupervised rhythm and voice conversion to transfor
 2. Installation
 Markdown
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 This project builds upon the **RnV (Rhythm and Voice)** framework.
 
@@ -129,7 +130,7 @@ pip install transformers datasets torch librosa soundfile jiwer pandas matplotli
 ### **3. Data Preparation**
 
 ```markdown
-## 📂 Data Preparation
+##  Data Preparation
 
 1.  **Download Data:** Obtain the [TORGO database](http://www.cs.toronto.edu/~torgo/). [cite: 11, 101]
 2.  **Organize Files:** Structure your audio files to separate Dysarthric and Control speakers.
@@ -152,7 +153,7 @@ data/
 ### **4. Speech Conversion**
 
 ```markdown
-## 🔄 Speech Conversion Pipeline
+## Speech Conversion Pipeline
 
 We provide scripts to convert dysarthric speech into "healthy" speech using various configurations (Rhythm conversion, Voice conversion, or both). [cite: 42, 43, 53]
 
@@ -184,7 +185,7 @@ This will create processed datasets for every experiment type (e.g., Syllable_Gl
 ### **5. ASR Training**
 
 ```markdown
-## 🚀 ASR Training (LOSO)
+##  ASR Training (LOSO)
 
 We perform **Leave-One-Speaker-Out (LOSO)** cross-validation. The scripts automatically train on all available speakers *except* the test speaker, then evaluate on that speaker. [cite: 142]
 
@@ -214,7 +215,7 @@ python train_wav.py \
 ### **6. Kaldi Baseline**
 
 ```markdown
-## 📊 Kaldi Baseline (LF-MMI)
+##  Kaldi Baseline (LF-MMI)
 
 The `run_loso.sh` script implements the Lattice-Free MMI (LF-MMI) baseline using the Kaldi toolkit. [cite: 145, 146]
 
@@ -241,7 +242,7 @@ Steps Performed:
 ### **7. Citation**
 
 ```markdown
-## 📄 Citation
+##  Citation
 
 If you use this code, please cite the original paper:
 
