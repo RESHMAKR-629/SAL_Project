@@ -1,8 +1,4 @@
-I apologize for the confusion. Here is the **complete, raw Markdown code** for the entire `README.md` file.
-
-You can copy the code block below **as a single text** and paste it directly into a file named `README.md`.
-
-````markdown
+# SAL Project
 # Unsupervised Rhythm and Voice Conversion to Improve ASR on Dysarthric Speech
 
 This repository contains the implementation and analysis code for the paper:
@@ -15,7 +11,7 @@ This project explores using unsupervised rhythm and voice conversion to transfor
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 1. [Installation & Setup](#1-installation--setup)
 2. [Data Preparation](#2-data-preparation)
 3. [Speech Conversion Pipeline](#3-speech-conversion-pipeline)
