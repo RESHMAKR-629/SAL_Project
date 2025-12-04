@@ -141,7 +141,36 @@ python train_wav.py \
 
 -----
 
-## 5\. Analysis & Evaluation
+-----
+
+## 5\. Kaldi Baseline (LF-MMI)
+
+The `run_loso.sh` script implements the Lattice-Free MMI (LF-MMI) baseline using the Kaldi toolkit, as described in the paper.
+
+**Prerequisites:**
+
+  * Kaldi installed and compiled.
+  * `path.sh` and `cmd.sh` configured for your system.
+
+**Procedure:**
+
+1.  **Data Preparation:** The script generates `wav.scp`, `text`, `utt2spk` for the LOSO splits.
+2.  **Feature Extraction:** Extracts MFCCs and computes CMVN.
+3.  **GMM-HMM Training:** Trains Monophone, Triphone (delta), and LDA-MLLT models to generate alignments.
+4.  **Chain Training (LF-MMI):**
+      * Generates numerator and denominator lattices.
+      * Trains the TDNN-F acoustic model.
+5.  **Decoding:** Decodes using a bigram language model (for sentences) or grammar (for isolated words).
+
+**Usage:**
+
+```bash
+./run_loso.sh --stage 0 --data_dir "/path/to/torgo"
+```
+
+-----
+
+## 6\. Analysis & Evaluation
 
 We provide a comprehensive analysis suite to evaluate Word Error Rate (WER), Phoneme Error Rate (PER), Syllable Deviation, and Error Composition (Insertion/Deletion/Substitution).
 
@@ -171,35 +200,6 @@ python generate_linguistic_insights.py \
   --master_csv "./experiments/MASTER_ALL_EXPERIMENTS.csv" \
   --stats_csv "speaker_stats.csv"
 ```
-
------
-
-## 6\. Kaldi Baseline (LF-MMI)
-
-The `run_loso.sh` script implements the Lattice-Free MMI (LF-MMI) baseline using the Kaldi toolkit, as described in the paper.
-
-**Prerequisites:**
-
-  * Kaldi installed and compiled.
-  * `path.sh` and `cmd.sh` configured for your system.
-
-**Procedure:**
-
-1.  **Data Preparation:** The script generates `wav.scp`, `text`, `utt2spk` for the LOSO splits.
-2.  **Feature Extraction:** Extracts MFCCs and computes CMVN.
-3.  **GMM-HMM Training:** Trains Monophone, Triphone (delta), and LDA-MLLT models to generate alignments.
-4.  **Chain Training (LF-MMI):**
-      * Generates numerator and denominator lattices.
-      * Trains the TDNN-F acoustic model.
-5.  **Decoding:** Decodes using a bigram language model (for sentences) or grammar (for isolated words).
-
-**Usage:**
-
-```bash
-./run_loso.sh --stage 0 --data_dir "/path/to/torgo"
-```
-
------
 
 ## Citation
 
